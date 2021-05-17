@@ -1,0 +1,12 @@
+{
+  "git.ignoreLimitWarning": true,
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#39e07e",
+      "statusBar.background" : "#39e07e",
+    },
+    "files.eol": "\n",
+    "i18n-ally.localesPaths": [
+      "src/lang",
+      "src/lang/locales"
+    ],
+}
