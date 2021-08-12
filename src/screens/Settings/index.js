@@ -1,8 +1,6 @@
 import React from 'react';
 import SettingsView from './view';
 
-const Settings = () => {
+export function Settings() {
   return <SettingsView />;
-};
-
-export default Settings;
+}

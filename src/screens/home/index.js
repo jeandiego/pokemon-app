@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HomeView from './view';
+import { getPokemon } from '../../controller/pokemons';
 
-const home = () => {
-  return <HomeView />;
-};
+export function Home() {
+  const [pokemons, setPokemons] = useState([]);
+  // const [loading, setLoading] = useState(false);
 
-export default home;
+  async function listPokemon() {
+    const allPokemons = await getPokemon();
+
+    setPokemons(allPokemons);
+  }
+
+  useEffect(() => {
+    listPokemon();
+  }, []);
+
+  return <HomeView pokemons={pokemons} />;
+}

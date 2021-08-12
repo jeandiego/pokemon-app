@@ -1,5 +1,6 @@
 import React from 'react';
-import Routes from './routes/index';
+import { Routes } from './routes';
+import './config/ReactotronConfig';
 
 const App = () => {
   return (
