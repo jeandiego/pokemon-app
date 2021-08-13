@@ -1,34 +1,36 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { Text, SafeAreaView, FlatList, Image } from 'react-native';
+import { Text, FlatList, TextInput } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import PokeText from '../../components/PokeText';
+import interBlack from '../../config/constants';
+import { PrimaryCard } from '../../components/PrimaryCard';
 
-// import { Container } from './styles';
+import { Container, InputView, SearchInput } from './styles';
 
 const HomerView = ({ pokemons }) => {
   // const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#3de' }}>
+    <Container safeArea={insets}>
+      <PokeText size={24} weight={700} height={32}>
+        Pokédex
+      </PokeText>
+      <PokeText color="#999999">
+        Search for Pokémon by name or using the National Pokédex number
+      </PokeText>
+      <InputView>
+        <SearchInput placeholder="What Pókemon are you looking for?" />
+      </InputView>
       <FlatList
         data={pokemons}
         keyExtractor={(item) => item.name}
         renderItem={({ item, index }) => {
-          const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/shiny/female/25.png`;
-
-          return (
-            <>
-              <Image
-                source={{
-                  uri: imageUrl,
-                }}
-                style={{ width: 100, height: 100 }}
-              />
-              <Text>{item.name}</Text>
-            </>
-          );
+          return <PrimaryCard pokemon={item} image={index} />;
         }}
+        style={{ paddingTop: 20 }}
       />
-    </SafeAreaView>
+    </Container>
   );
 };
 
