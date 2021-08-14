@@ -1,4 +1,4 @@
-const type = {
+export const type = {
   interThin: 'Inter-Thin',
   interLight: 'Inter-Light',
   interRegular: 'Inter-Regular',
@@ -10,89 +10,42 @@ const type = {
   interExtraLight: 'Inter-ExtraLight',
 };
 
-const pokemonType = [
-  {
-    name: 'normal',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'fighting',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'flying',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'poison',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'ground',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'rock',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'bug',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'ghost',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'steel',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'fire',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'water',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'grass',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'electric',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'psychic',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'ice',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'dragon',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'dark',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'fairy',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'unknown',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'shadow',
-    color: '#FFFFFF',
-  },
-];
+export const POKEMON_TYPES_COLORS = {
+  // steel: '#000',
+  // fire: '#FFDCBD',
+  // grass: '#BDE8B0',
+  // electric: '#F9E8B3',
+  // water: '#B6DAFB',
+  // ice: '#E7F6FE',
+  // ground: '#f4e7da',
+  // rock: '#E5D6C7',
+  // fairy: '#fceaff',
+  // poison: '#D6C2D3',
+  // bug: '#FBD6C6',
+  // dragon: '#97b3e6',
+  // psychic: '#FFCCE8',
+  // flying: '#000',
+  // fighting: '#EAE6DF',
+  // normal: '#F5F5F5',
+};
 
-export default {
-  type,
+export const POKEMON_TYPE_COLOR = {
+  bug: '#E3D5B9',
+  dark: '#6F6E78',
+  dragon: '#97B3E6',
+  electric: '#F9E8B3',
+  fairy: '#FCEAFF',
+  fighting: '#EAE6DF',
+  fire: '#FFDCBD',
+  flying: '#ACC1EC',
+  ghost: '#C3B9DF',
+  grass: '#BDE8B0',
+  ground: '#F4E7DA',
+  ice: '#E7F6FE',
+  normal: '#F0F0F0',
+  poison: '#D6C2D3',
+  psychic: '#FFCCE8',
+  rock: '#E5D6C7',
+  steel: '#E6EBEE',
+  water: '#B6DAFB',
 };

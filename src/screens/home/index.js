@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import reactotron from 'reactotron-react-native';
 import HomeView from './view';
-import { getPokemon } from '../../controller/pokemons';
+import { getAllPokemons } from '../../services/pokemons';
 
 export function Home() {
   const [pokemons, setPokemons] = useState([]);
   // const [loading, setLoading] = useState(false);
 
-  async function listPokemon() {
-    const allPokemons = await getPokemon();
+  const fetchPokemons = async () => {
+    const pokemonsData = await getAllPokemons();
 
-    setPokemons(allPokemons);
-  }
+    setPokemons(pokemonsData);
+  };
 
+  reactotron.log(pokemons);
   useEffect(() => {
-    listPokemon();
+    fetchPokemons();
   }, []);
 
   return <HomeView pokemons={pokemons} />;
