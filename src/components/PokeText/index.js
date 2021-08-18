@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import interBlack from '../../config/constants';
 
 export const Text = styled.Text`
   ${(p) => (p.flex ? 'flex:1' : null)}
